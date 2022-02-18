@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cons_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top"
+        android:layout_margin="10dp">
+
+        <ImageView
+            android:id="@+id/blue_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="4dp"
+            android:background="#9876E6"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Due for submission"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/blue_img"
+            app:layout_constraintStart_toEndOf="@+id/blue_img"
+            app:layout_constraintTop_toTopOf="@+id/blue_img" />
+
+        <ImageView
+            android:id="@+id/blu_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="24dp"
+            android:background="#1089FF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toTopOf="@+id/blue_img" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Submitted"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/blu_img"
+            app:layout_constraintStart_toEndOf="@+id/blu_img"
+            app:layout_constraintTop_toTopOf="@+id/blu_img" />
+
+
+        <ImageView
+            android:id="@+id/red_img"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="24dp"
+            android:background="#FF414D"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="@+id/blu_img" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="OverDue"
+            android:textSize="12dp"
+            app:layout_constraintBottom_toBottomOf="@+id/red_img"
+            app:layout_constraintStart_toEndOf="@+id/red_img"
+            app:layout_constraintTop_toTopOf="@+id/red_img" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/barchart"
+        android:layout_width="match_parent"
+        android:layout_height="300dp" />
+
+</LinearLayout>
